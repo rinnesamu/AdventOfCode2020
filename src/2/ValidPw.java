@@ -54,7 +54,6 @@ public class ValidPw {
     try{
       reader = new BufferedReader(new FileReader("./Data/input2"));
       while ((row = reader.readLine()) != null){
-        int count = 0;
         String[] split = row.split(" ", 3);
         String[] minMax = split[0].split("-", 2);
         firstIndex = Integer.parseInt(minMax[0]) - 1;
