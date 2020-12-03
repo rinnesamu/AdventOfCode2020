@@ -1,0 +1,1 @@
+This time task was to count how many trees you find in specific paths.
