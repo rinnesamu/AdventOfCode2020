@@ -14,21 +14,24 @@ public class ValidPassports {
   static boolean eclFound;
   static boolean pidFound;
   static boolean cidFound;
+  static final String PATH = "./Data/input4";
+  static final String BIRTH_YEAR = "byr";
+  static final String ISSUE_YEAR = "iyr";
+  static final String EXPIRATION_YEAR = "eyr";
+  static final String HEIGHT = "hgt";
+  static final String HAIR_COLOR = "hcl";
+  static final String EYE_COLOR = "ecl";
+  static final String PASSPORT_ID = "pid";
+  static final String COUNTRY_ID = "cid";
+  static final char FIRST_CHARACTER_OF_HCL = '#';
+  static final String[] ALLOWED_EYE_COLOR = {"amb", "blu",
+    "brn", "gry", "grn", "hzl", "oth"};
 
   public static void main(String args[]){
     //validWithoutRestrictions();
     validWithRestrictions();
   }
   static void validWithoutRestrictions(){
-    final String PATH = "./Data/input4";
-    final String BIRTH_YEAR = "byr";
-    final String ISSUE_YEAR = "iyr";
-    final String EXPIRATION_YEAR = "eyr";
-    final String HEIGHT = "hgt";
-    final String HAIR_COLOR = "hcl";
-    final String EYE_COLOR = "ecl";
-    final String PASSPORT_ID = "pid";
-    final String COUNTRY_ID = "cid";
     reset();
     String row;
     int validPassportCount = 0;
@@ -71,33 +74,19 @@ public class ValidPassports {
             }
           }
         }
-
       }
       if (checkBooleans()) { // check if last row was ok.
         validPassportCount++;
       }
-
       System.out.println("Valid passports found: " + validPassportCount );
-
     }catch (Exception e) {
 
     }
   }
+
   static void validWithRestrictions(){
-    final String PATH = "./Data/input4";
-    final String BIRTH_YEAR = "byr";
-    final String ISSUE_YEAR = "iyr";
-    final String EXPIRATION_YEAR = "eyr";
-    final String HEIGHT = "hgt";
-    final String HAIR_COLOR = "hcl";
-    final String EYE_COLOR = "ecl";
-    final String PASSPORT_ID = "pid";
-    final String COUNTRY_ID = "cid";
-    final char FIRST_CHARACTER_OF_HCL = '#';
-    final String[] ALLOWED_EYE_COLOR = {"amb", "blu",
-      "brn", "gry", "grn", "hzl", "oth"};
+    reset();
     String row;
-    int testCount = 0;
     int validPassportCount = 0;
     BufferedReader reader = utils.BufReader.getReader(PATH);
     try{
