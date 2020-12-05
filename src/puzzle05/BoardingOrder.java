@@ -24,10 +24,7 @@ public class BoardingOrder {
       }
       System.out.println("Max seat id is " + getMaxSeatId(seatIds));
       System.out.println("My own id is " + getOwnSeatId(seatIds));
-    }catch(Exception e){
-
-    }
-
+    }catch(Exception e){ }
   }
 
   static int getSeatRow(final String row){
